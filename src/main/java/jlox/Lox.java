@@ -42,8 +42,8 @@ public class Lox {
 
     private static void run (String source)
     {
-        Scanner scanner = new Scanner(source);
-        scanner.tokens().forEach(System.out::println);
+        LoxScanner scanner = new LoxScanner(source);
+        scanner.scan().forEach(System.out::println);
     }
 
     private static void run_script (String script)

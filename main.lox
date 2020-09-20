@@ -1,2 +1,5 @@
 // Lox hello world program.
 print "Hello, World!";
+name = "Devashish Jaiswal";
+if (name.has_value())
+    print "Name has value";

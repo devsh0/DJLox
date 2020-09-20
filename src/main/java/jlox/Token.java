@@ -14,6 +14,7 @@ public class Token {
     }
 
     public String toString() {
-        return m_type + " " + m_lexeme + " " + m_literal;
+        String format = "{" + "TokenType: %s, Lexeme: %s, Literal: %s}";
+        return String.format(format, m_type, m_lexeme, m_literal);
     }
 }
