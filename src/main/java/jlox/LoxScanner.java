@@ -31,23 +31,24 @@ public class LoxScanner
         return m_source.charAt(m_current++);
     }
 
-    static {
-        m_keywords.put("and",    TokenType.AND);
-        m_keywords.put("class",  TokenType.CLASS);
-        m_keywords.put("else",   TokenType.ELSE);
-        m_keywords.put("false",  TokenType.FALSE);
-        m_keywords.put("for",    TokenType.FOR);
-        m_keywords.put("fun",    TokenType.FUN);
-        m_keywords.put("if",     TokenType.IF);
-        m_keywords.put("nil",    TokenType.NIL);
-        m_keywords.put("or",     TokenType.OR);
-        m_keywords.put("print",  TokenType.PRINT);
+    static
+    {
+        m_keywords.put("and", TokenType.AND);
+        m_keywords.put("class", TokenType.CLASS);
+        m_keywords.put("else", TokenType.ELSE);
+        m_keywords.put("false", TokenType.FALSE);
+        m_keywords.put("for", TokenType.FOR);
+        m_keywords.put("fun", TokenType.FUN);
+        m_keywords.put("if", TokenType.IF);
+        m_keywords.put("nil", TokenType.NIL);
+        m_keywords.put("or", TokenType.OR);
+        m_keywords.put("print", TokenType.PRINT);
         m_keywords.put("return", TokenType.RETURN);
-        m_keywords.put("super",  TokenType.SUPER);
-        m_keywords.put("this",   TokenType.THIS);
-        m_keywords.put("true",   TokenType.TRUE);
-        m_keywords.put("var",    TokenType.VAR);
-        m_keywords.put("while",  TokenType.WHILE);
+        m_keywords.put("super", TokenType.SUPER);
+        m_keywords.put("this", TokenType.THIS);
+        m_keywords.put("true", TokenType.TRUE);
+        m_keywords.put("var", TokenType.VAR);
+        m_keywords.put("while", TokenType.WHILE);
     }
 
     private Map<String, TokenType> keywords ()
@@ -164,7 +165,8 @@ public class LoxScanner
             }
 
             // Whitespaces.
-            case ' ', '\t', '\r' -> {}
+            case ' ', '\t', '\r' -> {
+            }
             case '\n' -> m_line++;
 
             // String literals.
